@@ -1,9 +1,16 @@
-node ('node-1') {
-  stage('Source') {
-    git 'https://github.com/digitalvarys/jenkins-tutorials.git''
-  }
-  stage('Compile') { 
-    def gradle_home = tool 'gradle4'
-    sh "'${gradle_home}/bin/gradle' clean compileJava test"
-  }
+node {
+      for (i=0; i<2; i++) { 
+           stage "Stage #"+i
+           print 'This is the stage #' +i
+           if (i==0)
+           {
+               git "https://github.com/digitalvarys/jenkins-tutorials.git"
+               echo 'Running on Stage #0'
+           }
+           else {
+               build 'Declarative pipeline'
+               echo 'Running on Stage #1'
+           }
+      }
 }
+
