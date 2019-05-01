@@ -1,3 +1,4 @@
+
 pipeline {
 	agent any
 		stages {
@@ -12,11 +13,7 @@ pipeline {
 			}
 		}
 		stage('Three') {
-			when {
-				not {
-					branch "master"
-				}
-			}
+
 			steps {
 				echo "Running Stage Three"
 			}
