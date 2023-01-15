@@ -4,7 +4,7 @@ node {
            print 'This is the stage #' +i
            if (i==0)
            {
-               git "https://github.com/nazmul-cse48/jenkins-tutorials.git"
+               git "https://github.com/digitalvarys/jenkins-tutorials.git"
                echo 'Running on Stage #0'
            }
            else {
