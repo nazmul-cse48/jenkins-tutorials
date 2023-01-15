@@ -8,6 +8,7 @@ node {
                echo 'Running on Stage #0'
            }
            else {
+                echo 'build stage'
                echo 'Running on Stage #1'
            }
       }
