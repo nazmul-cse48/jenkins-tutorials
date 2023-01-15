@@ -8,6 +8,7 @@ pipeline {
                 sh 'mkdir from-jenkins'
                 sh 'touch from-jenkins/demo.txt'
 		  echo 'my first task is done'
+		  echo 'done tiggering'
                 }
         }
 
